@@ -1,6 +1,9 @@
 # The project structure
 
 ### Initial proposition: Five elements
+
+![Graphical representation](img/project_structure.png "5-element")
+
 1. info
     * Metadata (libraries, colours, etc.), docs
 2. code
