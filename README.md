@@ -2,7 +2,7 @@
 
 ### Initial proposition: Five elements
 
-![Graphical representation](img/project_structure.png "5-element")
+![Graphical representation](img/project_structure.png =10x10)
 
 1. info
     * Metadata (libraries, colours, etc.), docs
