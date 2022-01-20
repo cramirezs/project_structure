@@ -1,0 +1,28 @@
+hashtag_id,tissue,donor,site,Tumor grade,Diagnosis,Diagnosis subclass,New or Relapse
+BN8,normal,S8,brain,0,Normal brain,Normal brain,
+BT1,tumor,S1,brain,I,Low grade glioma,Pilocytic astrocytoma,New
+BT2,tumor,S2,brain,IV,Medulloblastoma,Medulloblastoma,New
+BT3,tumor,S3,brain,I,Low grade glioma,Pilocytic astrocytoma,New
+BT4,tumor,S4,brain,I,Low grade glioma,Pilocytic astrocytoma,New
+BT5,tumor,S5,brain,I,Choroid plexus papilloma,Choroid plexus papilloma,New
+BT7,tumor,S7,brain,I,Low grade glioma,Pilocytic astrocytoma,New
+BT8,tumor,S8,brain,I,Low grade glioma,Ganglioglioma,New
+BT9,tumor,S9,brain,I,Low grade glioma,Ganglioglioma,New
+BT10,tumor,S10,brain,III,Anaplastic ependymoma,Anaplastic ependymoma,Relapse
+BT11,tumor,S11,brain,IV,High grade glioma,Diffuse midline glioma,New
+BT12,tumor,S12,brain,III,High grade glioma,High grade midline glioma,New
+BT13,tumor,S13,brain,IV,Medulloblastoma,Medulloblastoma,Relapse
+BT14,tumor,S14,brain,IV,High grade glioma,High grade glioma GBM,Relapse
+BT15,tumor,S15,brain,III,Anaplastic ependymoma,Anaplastic ependymoma,Relapse
+BT17_brain,tumor,S17,brain,IV,Medulloblastoma,Medulloblastoma,New
+BT17_spinal,tumor,S17,spine,IV,Medulloblastoma,Medulloblastoma,New
+BT18,tumor,S18,brain,IV,High grade glioma,High grade glioma,New
+BT19,tumor,S19,brain,II,Low grade glioma,Diffuse astrocytoma,New
+BT20,tumor,S20,brain,IV,Medulloblastoma,Medulloblastoma,New
+BT21,tumor,S21,brain,III,High grade glioma,High grade glioma,New
+BT22,tumor,S22,brain,III,Anaplastic ependymoma,Anaplastic ependymoma,New
+BT23,tumor,S23,brain,IV,Medulloblastoma,Medulloblastoma,New
+BT24,tumor,S24,brain,I,Craniopharyngioma,Craniopharyngioma,Relapse
+BT25,tumor,S25,brain,I,Craniopharyngioma,Craniopharyngioma,New
+BT26,tumor,S26,brain,IV,Neuroblastoma,Neuroblastoma,New
+BT27,tumor,S27,brain,I,Low grade glioma,Pilocytic astrocytoma,New
