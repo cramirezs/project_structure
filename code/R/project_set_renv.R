@@ -45,7 +45,8 @@ if(dir.exists(output_dir) && length(list.files(output_dir))>0){
 dir.create(output_dir, showWarnings = FALSE); setwd(output_dir); system("ls -hola")
 
 if(requireNamespace("crayon", quietly = TRUE)){
-  cyan = crayon::cyan; redb = crayon::red$bold; greb = crayon::green$bold; yelo = crayon::yellow
+  cyan = crayon::cyan; redb = crayon::red$bold
+  greb = crayon::green$bold; yelo = crayon::yellow
 }else{ cyan = redb = greb = yelo = c }
 
 if (!requireNamespace("remotes", quietly = TRUE))
@@ -67,12 +68,23 @@ for (i in packages_funcs){
     if (!requireNamespace(i_name, quietly = TRUE)){
       cat(" - installing\n")
       if(grepl("\\/", i)){
-        remotes::install_github(i) # install from github if it's not on CRAN
+        remotes::install_github(i) # install from github if username/pckg
       }else{
         install.packages(i, repos = "https://cloud.r-project.org")
       }
     }
-    suppressMessages(require(package = i_name, quietly = TRUE, character.only = TRUE))
+    temp = suppressMessages(
+      require(package = i_name, quietly = TRUE, character.only = TRUE)
+    )
+    if(isFALSE(temp)){
+      if (!require("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+      BiocManager::install(i_name)
+      temp = suppressMessages(
+        require(package = i_name, quietly = TRUE, character.only = TRUE)
+      )
+    }
+    if(isTRUE(temp)) cat(greb("Success!\n"))
   }else{ source(i) }
 }
 
