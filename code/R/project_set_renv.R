@@ -73,6 +73,10 @@ for (i in packages_funcs){
       cat(" - installing\n")
       if(grepl("\\/", i)){
         remotes::install_github(i) # install from github if username/pckg
+      }else if(grepl("^bioc", i_name)){ # explicitely from Bioconductor
+        if (!require("BiocManager", quietly = TRUE))
+          install.packages("BiocManager")
+        BiocManager::install(i_name)
       }else{
         install.packages(i, repos = "https://cloud.r-project.org")
       }
