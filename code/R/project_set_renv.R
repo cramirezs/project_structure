@@ -54,7 +54,9 @@ if (!requireNamespace("remotes", quietly = TRUE))
  install.packages("remotes", repos = "https://cloud.r-project.org")
 if (!requireNamespace("renv", quietly = TRUE)){
   cat(yelo("Installing renv\n"))
-  remotes::install_github("rstudio/renv")
+  # remotes::install_github("rstudio/renv")
+  # install.packages("renv", repos = "https://rstudio.r-universe.dev")
+  install.packages("renv", repos = "https://cloud.r-project.org")
 }
 if(!file.exists("renv.lock")) renv::init()
 renv::activate()
