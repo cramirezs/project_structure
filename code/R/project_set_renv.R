@@ -42,7 +42,8 @@ if(dir.exists(output_dir) && length(list.files(output_dir))>0){
   ask <- if(interactive()) readline("") else readLines("stdin", n = 1)
   if(grepl("^n", ask)){ cat("... aborting\n"); q("no") }
 }
-dir.create(output_dir, showWarnings = FALSE); setwd(output_dir); system("ls -hola")
+dir.create(output_dir, showWarnings = FALSE)
+setwd(output_dir); system("ls -hola")
 
 if(requireNamespace("crayon", quietly = TRUE)){
   cyan = crayon::cyan; redb = crayon::red$bold
@@ -51,7 +52,10 @@ if(requireNamespace("crayon", quietly = TRUE)){
 
 if (!requireNamespace("remotes", quietly = TRUE))
  install.packages("remotes", repos = "https://cloud.r-project.org")
-if (!requireNamespace("renv", quietly = TRUE)) remotes::install_github("rstudio/renv")
+if (!requireNamespace("renv", quietly = TRUE)){
+  cat(yelo("Installing renv\n"))
+  remotes::install_github("rstudio/renv")
+}
 if(!file.exists("renv.lock")) renv::init()
 renv::activate()
 
